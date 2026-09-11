@@ -1,0 +1,43 @@
+global:
+  cloudProvider: aws
+
+  vaultConfig:
+    namespace: admin
+    refreshAfter: 30s
+
+platformServices:
+  arc-runners:
+    enabled: true
+    vaultConfig:
+      enabled: true
+      path: k8s/oss/ci/github-action-runner-connector
+
+  jenkins:
+    enabled: true
+    vaultConfig:
+      enabled: true
+      path: k8s/oss/ci/jenkins
+
+  jenkins-inbound-agent:
+    enabled: true
+    vaultConfig:
+      enabled: true
+      path: k8s/oss/ci/jenkins-inbound-agent-dockerhub-connector
+
+  postgresql:
+    enabled: true
+    vaultConfig:
+      enabled: true
+      path: k8s/oss/database/postgresql
+
+  mongodb-sharded:
+    enabled: true
+    vaultConfig:
+      enabled: true
+      path: k8s/oss/database/mongodb-sharded
+
+  grafana-dashboards:
+    enabled: true
+    vaultConfig:
+      enabled: true
+      path: k8s/oss/monitoring/grafana-dashboard

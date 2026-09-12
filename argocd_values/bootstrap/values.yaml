@@ -6,7 +6,7 @@ global:
     refreshAfter: 30s
 
 platformServices:
-  arc:
+  arc-systems:
     enabled: true
 
   arc-runners:
@@ -45,7 +45,7 @@ platformServices:
   nginx:
     enabled: true
 
-  grafana-dashboards:
+  grafana-dashboard:
     enabled: true
     vaultConfig:
       enabled: true

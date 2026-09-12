@@ -6,11 +6,17 @@ global:
     refreshAfter: 30s
 
 platformServices:
+  arc:
+    enabled: true
+
   arc-runners:
     enabled: true
     vaultConfig:
       enabled: true
       path: k8s/oss/ci/github-action-runner-connector
+
+  cert-manager:
+    enabled: true
 
   jenkins:
     enabled: true
@@ -36,8 +42,29 @@ platformServices:
       enabled: true
       path: k8s/oss/database/mongodb-sharded
 
+  nginx:
+    enabled: true
+
   grafana-dashboards:
     enabled: true
     vaultConfig:
       enabled: true
       path: k8s/oss/monitoring/grafana-dashboard
+
+  grafana-loki:
+    enabled: true
+
+  grafana-mimir:
+    enabled: true
+
+  grafana-tempo:
+    enabled: true
+
+  grafana-alloy:
+    enabled: true
+
+  velero:
+    enabled: true
+
+  testing:
+    enabled: true

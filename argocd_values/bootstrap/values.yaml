@@ -42,7 +42,7 @@ platformServices:
       enabled: true
       path: k8s/oss/database/mongodb-sharded
 
-  nginx:
+  nginx-ingress:
     enabled: true
 
   grafana-dashboard:

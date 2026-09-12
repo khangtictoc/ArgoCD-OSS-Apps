@@ -5,7 +5,7 @@ image:
   tag: "0.10.0"
 
 imagePullSecrets:
-  - name: dockerhub-secret
+  - name: jenkins-inbound-agent-creds
 
 agent:
   name: "General"
@@ -17,7 +17,7 @@ agent:
 
   kaniko:
     enabled: true
-    dockerSecretName: "dockerhub-secret"
+    dockerSecretName: jenkins-inbound-agent-creds
     sharedVolumes:
       - name: workspace
         mountPath: /home/jenkins/agent-general

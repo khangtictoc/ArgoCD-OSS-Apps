@@ -8,7 +8,7 @@
 # - userPasswordKey: User password for customed user defined at 'auth.user'
 # - replicationPasswordKey: Replication password for replication user
 auth:
-  existingSecret: "postgresql" # Managed by "Vault Secret Operator"
+  existingSecret: "postgresql-creds" # Managed by "Vault Secret Operator"
 
 ## Secret Key mapping (DEFAULT)
 # secretKeys:

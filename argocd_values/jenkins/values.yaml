@@ -28,7 +28,7 @@ controller:
   #                     workDirPath: "/home/jenkins/agent-general"
   #                     internalDir: "remoting"
   admin:
-    existingSecret: "jenkins-creds"
+    existingSecret: "jenkins-admin-creds"
     userKey: jenkins-admin-user
     passwordKey: jenkins-admin-password
   ## BACKUP JENKINS

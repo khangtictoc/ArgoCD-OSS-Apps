@@ -13,7 +13,11 @@ platformServices:
     enabled: true
     vaultConfig:
       enabled: true
-      path: k8s/oss/ci/github-action-runner-connector
+      secrets:
+        - secret: gh-action-runner-connector-creds
+          path: k8s/oss/ci/github-action-runner-connector
+        - secret: gh-action-runner-dockerhub-connector-creds
+          path: k8s/oss/ci/github-action-runner-dockerhub-connector
 
   cert-manager:
     enabled: true
@@ -22,25 +26,35 @@ platformServices:
     enabled: true
     vaultConfig:
       enabled: true
-      path: k8s/oss/ci/jenkins
+      secrets:
+        - secret: jenkins-admin-creds
+          path: k8s/oss/ci/jenkins
 
   jenkins-inbound-agent:
     enabled: true
     vaultConfig:
       enabled: true
-      path: k8s/oss/ci/jenkins-inbound-agent-dockerhub-connector
+      secrets:
+        - secret: jenkins-agent-dockerhub-connector-creds
+          path: k8s/oss/ci/jenkins-inbound-agent-dockerhub-connector
+        - secret: jenkins-agent-master-connector-creds
+          path: k8s/oss/ci/jenkins-inbound-agent
 
   postgresql:
     enabled: true
     vaultConfig:
       enabled: true
-      path: k8s/oss/database/postgresql
+      secrets:
+        - secret: postgresql-admin-creds
+          path: k8s/oss/database/postgresql
 
   mongodb-sharded:
     enabled: true
     vaultConfig:
       enabled: true
-      path: k8s/oss/database/mongodb-sharded
+      secrets:
+        - secret: mongodb-sharded-admin-creds
+          path: k8s/oss/database/mongodb-sharded
 
   nginx-ingress:
     enabled: true
@@ -49,7 +63,9 @@ platformServices:
     enabled: true
     vaultConfig:
       enabled: true
-      path: k8s/oss/monitoring/grafana-dashboard
+      secrets:
+        - secret: grafana-dashboard-admin-creds
+          path: k8s/oss/monitoring/grafana-dashboard
 
   grafana-loki:
     enabled: true

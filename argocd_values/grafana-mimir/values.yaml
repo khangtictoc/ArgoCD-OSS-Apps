@@ -5,6 +5,10 @@
 alertmanager:
   replicas: 1
 
+# For Testing locally (DO NOT USE IN PRODUCTION)
+minio:
+  enabled: false
+
 distributor:
   replicas: 1
 
